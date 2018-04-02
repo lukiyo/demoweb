@@ -5,16 +5,15 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@EnableAutoConfiguration
+@SpringBootApplication
 public class DemoApplication {
 
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	String home() {
-		return "Hello World second edition! hot fix other change!";
+		return "Hello World second edition!";
 	}
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-
 }
